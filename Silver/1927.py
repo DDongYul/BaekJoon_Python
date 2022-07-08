@@ -1,3 +1,6 @@
+#1927번 : 최소힙
+#https://www.acmicpc.net/problem/1927
+
 import sys
 from collections import deque
 
