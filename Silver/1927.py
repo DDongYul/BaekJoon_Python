@@ -3,17 +3,27 @@
 
 import sys
 from collections import deque
-
 hip = []
-min_num = 2^31
-def insert(x):
-    global min_num
+class Node:
+    def __init__(self,data,left,right):
+        self.data = data
+        self.left = left
+        self.right = right
+
+root = Node(2^31) #root
+def insert(num):
+    node = Node(num)
+    curr = root
+    flag = True
+    while flag:
+        if node.data < curr.data
+    global root
     hip.append(x)
     if x < min_num:
         min_num = x
 
 def delete():
-    global min_num
+    global root
     if hip:
         print(hip.pop(hip.index(min_num)))
         if hip:
