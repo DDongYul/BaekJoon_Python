@@ -1,6 +1,3 @@
-#백준 1697번: 숨바꼭질 (실버1)
-#https://www.acmicpc.net/problem/1697
-
 import sys
 from collections import deque
 
