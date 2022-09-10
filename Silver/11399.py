@@ -1,7 +1,3 @@
-#백준:11300번
-#https://www.acmicpc.net/problem/11399
-#단순 구현문제
-
 import sys
 
 N = int(sys.stdin.readline())
