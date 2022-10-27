@@ -23,14 +23,10 @@ def BFS(start):
                 visited[i] = 1
 
 cnt = 0
-while not all(visited):
-    curr = 1
-    for i in range(N+1):
-        if not visited[i]:
-            curr = i
-            break
-    BFS(curr)
-    cnt+=1
+for i in range(1,N+1):
+    if not visited[i]:
+        BFS(i)
+        cnt+=1
 
 print(cnt)
 
