@@ -1,35 +1,16 @@
-str1 = list(input())
-str2 = list(input())
-str_map = [0 for _ in range(len(str1))]
-end_str = str2[-1]
+string = input()
+bomb_string = input()
+end_bomb = bomb_string[-1]
+stack = []
+length = len(bomb_string)
+for i in string:
+    stack.append(i)
+    if i == end_bomb:
+        if ''.join(stack[-length:]) == bomb_string:
+            del stack[-length:]
 
-stack1 = []
-for index,i in enumerate(str1):
-    if i==end_str:
-        stack1.append((i,index))
-        if len(stack1)>=len(str2):
-            flag = True
-            k = 0
-            for j in range(len(stack1)-len(str2),len(stack1)):
-                if stack1[j][0] != str2[k]:
-                    flag=False
-                k+=1
-            if flag:
-                for j in range(len(str2)):
-                    a,b = stack1.pop()
-                    str_map[b] = 1
-            else:
-                stack1.clear()
-        else:
-            stack1.clear()
-    else:
-        stack1.append((i,index))
-
-if all(str_map):
+rst = ''.join(stack)
+if rst == '':
     print("FRULA")
 else:
-    rst = []
-    for i in range(len(str1)):
-        if str_map[i] == 0:
-            rst.append(str1[i])
-    print("".join(rst))
+    print(rst)
