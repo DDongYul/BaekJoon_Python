@@ -12,10 +12,10 @@ for _ in range(M):
 def bf(start):
     dist = [0] + [INF] * N
     dist[start] = 0
-    for i in range(M):
+    for i in range(N):
         for s, d, w in edges:
             if dist[s] != INF and dist[d] > dist[s] + w:
-                if i == M - 1:
+                if i == N - 1:
                     return False
                 dist[d] = dist[s] + w
     return dist
